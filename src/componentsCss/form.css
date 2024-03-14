@@ -1,8 +1,9 @@
 .container{
     padding:3rem 0rem;
     display:flex;
-    align-item:center;
+    align-items: center;
     justify-content:center;
+    flex-direction: column;
 }
 
 .container form .userName,.password,.submitBtn{

@@ -22,7 +22,7 @@ function MainFile() {
       return(
         <>
        <div key={id}>
-        <h1>{joke}</h1>
+        <p style={{textAlign:'left'}}>{joke}</p>
        </div>
         </>
       )

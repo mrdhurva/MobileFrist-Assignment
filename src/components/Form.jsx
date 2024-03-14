@@ -1,11 +1,14 @@
 import React,{useState} from 'react';
 import {} from '../componentsCss/form.css'
+import Error from './Error';
 
 
 function Form() {
 
   const [userName,setUserName]=useState();
   const [password,setPassword]=useState();
+  const [submit,setSubmit]=useState(true);
+  const [path,setPath]=useState();
 
   const userNameChange=({target:{value}})=>{
     setUserName(value);
@@ -15,20 +18,25 @@ function Form() {
     setPassword(value);
   }
 
-  const submission=()=>{
-    if(userName!=='anvesh' && password!=='anvesh123'){
-      // alert('welcome')
-      return <h1>Invalid</h1>;
-    }else{
-      // alert('wrong')
-      return ;
+  const submission=(e)=>{
+    if(userName==='anvesh' && password==='anvesh123'){
+      setPath('/joke');
+      setSubmit(true);
+    }else if(userName!=='anvesh' && password!=='anvesh123'){
+      e.preventDefault();
+      setPath('')
+      setSubmit(!true);
     }
   }
 
   return (
     <>
+    
       <div className='container'>
-        <form action='#' onSubmit={submission}>
+      <div>
+      {submit ? '' : <Error/>}
+    </div>
+        <form action={path} onSubmit={submission}>
             <div className='userName'>
                 <div className='userNameLabel'>
                 <label>Username:</label>
