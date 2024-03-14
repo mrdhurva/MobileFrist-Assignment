@@ -1,0 +1,26 @@
+.container{
+    padding:3rem 0rem;
+    display:flex;
+    align-item:center;
+    justify-content:center;
+}
+
+.container form .userName,.password,.submitBtn{
+text-align:left;
+padding:0.3rem 0rem;
+}
+
+.container form .userName .userNameInput input,.password .passwordInput input{
+    height:1.4rem;
+    padding:0.2rem 0.4rem;
+    outline:none;
+    font-size:1rem;
+}
+
+.container form .submitBtn button{
+    padding:0.5rem 1rem;
+    color:white;
+    background-color:blue;
+    border:none;
+    cursor:pointer;
+}
