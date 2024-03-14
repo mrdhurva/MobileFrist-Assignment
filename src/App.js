@@ -13,7 +13,6 @@ function App() {
       <Route path='/joke' element={<MainFile/>}/>
      </Routes>
      </BrowserRouter>
-     {/* <Error/> */}
     </div>
   );
 }
